@@ -13,7 +13,7 @@ int main() {
 
     "the only one"_test = [] {
 
-        std::vector<int> const v ({0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1});
+        std::vector<int> const v ({0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1});
         expect(getLastZeroPos(v) == 5);
 
         std::vector<int> const v2 ({0, 0, 0, 0, 0, 1, 1, 1});

@@ -37,12 +37,14 @@ namespace {
     // Generic function
     template <Randomly_iterable_collection coll>
     int getLastZeroPos(coll const & cont) noexcept {
+        assert(cont.size());
         return detail::glzp_impl(cont.cbegin(), cont.cend());
     }
 
     // Function specific for builtin arrays
     template<typename T, std::size_t S>
     int getLastZeroPos(T const (& arr)[S]) noexcept {
+        assert(S);
         return detail::glzp_impl(std::cbegin(arr), std::cend(arr));
     }
 }
